@@ -1,7 +1,10 @@
 .c-params {
     &__list {
-        @extend %flex;
-        @extend %flex-wrap;
+        
+        @media ( min-width: $smartphone_portrait + 1px ) {
+        	display: flex;
+        	flex-wrap: wrap;
+        }
         
         li {       
             @extend %flex;     
