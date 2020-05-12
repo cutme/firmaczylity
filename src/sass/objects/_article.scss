@@ -1,0 +1,42 @@
+.o-article {
+    
+    h2 {
+        @extend %lead--2;
+        margin: {
+            bottom: .5em;
+            top: .25em;
+        }
+    }
+    
+    h4 {
+        @extend %lead--4;
+        margin: {
+            bottom: .5em;
+            top: .25em;
+        }
+    }
+    
+    ul {
+        li {
+            @extend %rel;
+            margin-bottom: 5px;
+            padding-left: 10px;
+            
+            @media ( max-width: $smartphone + px ) {
+            	padding-left: 20px;
+            }
+            
+            &:before {
+                @extend %abs-pseudo;
+                left: 0; top: 0px;
+                content: '• ';
+            }
+        }
+    }
+    
+    &--small {
+        p {
+            font-size: rem(14);
+        }
+    }
+}

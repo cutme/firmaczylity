@@ -1,0 +1,32 @@
+.c-description {
+    
+    img {
+
+    }
+    
+    .o-cols {
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+        	display: block;
+        }
+        
+        margin-bottom: 20px;
+        
+        &__item {
+            @media ( min-width: $smartphone_portrait + 1px ) {
+            
+                &:first-of-type {
+                    padding-right: 30px;
+                }
+            }
+            
+            @media ( max-width: $smartphone_portrait + px ) {
+            	margin-bottom: 20px;
+            }
+            
+            @media ( max-width: $smartphone_portrait + px ) {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+.c-params {
+    &__list {
+        @extend %flex;
+        @extend %flex-wrap;
+        
+        li {       
+            @extend %flex;     
+            margin-bottom: 10px;
+            font-size: rem(14);
+            
+            @media ( min-width: $smartphone_portrait + 1px ) {
+            	width: 50%;
+            }
+            
+            &:nth-child(odd) {
+                padding-right: 10px;
+            }
+            
+            span {
+                flex-shrink: 0;
+                display: inline-block;
+                width: 120px;
+                opacity: .7;
+            }
+        }
+    }
+}

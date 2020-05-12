@@ -1,0 +1,61 @@
+.o-quantity {
+	@extend %flex-inline;
+	border: 2px solid $c-gray-04;
+	margin-top: 5px;
+
+    i {
+        @extend %anim;
+        @extend %flex;
+        @extend %flex-xy;
+        width: 42px;
+        height: 42px;
+        user-select: none;
+        font: {
+            size: rem(24);
+            weight: $bold;
+        }
+        cursor: pointer; 
+        
+        &:first-of-type {
+            &:before {
+                content: '-';
+            }
+        }
+        
+        &:last-of-type {
+            &:before {
+                content: '+';
+            }
+        }
+        
+        &:hover {
+            background-color: $c-gray-04;
+        }
+    }
+
+    &:hover {
+        background-color: white;
+        color: inherit;
+    }
+    
+    &:active {
+        transform: translate3d(0, 0, 0);
+    }
+    
+    input[type=text] {
+        //flex: 1;
+        min-width: 0;
+        width: 60px;
+        height: 42px;
+        background: white;
+        border-left: 2px solid $c-gray-04;
+        border-right: 2px solid $c-gray-04;
+        text-align: center;
+        padding: 0 10px;
+        font: {
+            size: rem(24);
+            weight: $light;
+        }
+        color: $c-black-01;
+    }
+}

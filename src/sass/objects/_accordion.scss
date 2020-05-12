@@ -1,0 +1,58 @@
+.o-accordion {
+
+    &__content {
+        @extend %anim;
+        opacity: 0;
+        
+        &.fade-in {
+            opacity: 1;
+        }
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+    
+    &__more {
+        padding-top: 20px;
+    }
+    
+     &__title {
+        @extend %rel;
+        
+        width: calc(100% + 40px);
+        margin: -20px;
+        padding: 20px;
+        
+        cursor: pointer;
+        
+        &:after {
+            @extend %abs-pseudo;
+            @extend %anim;
+            right: 20px; top: 15px;
+            font: {
+                family: $icomoon;
+                size: rem(20);
+            }
+            opacity: .5;
+            content: "\e907";
+
+        }
+        
+        &.is-open {
+            &:after {
+                transform: scaleY(-1);
+            }
+        }
+    }
+
+    .o-header {
+        .o-lead--3 {
+            margin: 0;
+        }
+    }
+    
+    
+}

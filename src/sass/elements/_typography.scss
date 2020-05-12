@@ -1,0 +1,54 @@
+body {
+	@include antialias;
+	line-height: 1.5;
+	text-rendering: optimizeSpeed;
+	font: {
+		family: $text;
+		size: #{$base-font-size}px;
+		weight: $light;
+	}
+	color: $c-black-01;
+}
+
+a {
+	color: inherit;
+	cursor: pointer;
+	text-decoration: none;
+	
+	.is-loaded & {
+        @extend %anim;
+    }
+	
+	&:hover,
+    &:active,
+    &:focus {
+        outline: none;
+    }
+}
+
+input {
+    font-size: #{$base-font-size}px;
+}
+
+strong {
+    font-weight: $bold;
+}
+
+::selection {
+	background-color: var(--primary-color);
+	color: white;
+}
+
+hr {
+    height: 1px;
+    border: none;
+    background-color: rgba(black, .2);
+    margin: 15px 0;
+}
+
+
+u {
+    text-decoration-color: var(--primary-color);
+}
+
+

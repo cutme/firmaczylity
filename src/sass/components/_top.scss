@@ -1,0 +1,19 @@
+.c-top {
+	@include z-index(top);
+	height: 90px;
+    background-color: var(--primary-color);
+    
+    @media ( max-width: $tablet + px ) {
+    	height: 60px;
+    }
+    
+    .o-logo {
+        margin-right: 20px;
+    }
+    
+    .o-wrap {
+        @extend %flex;
+        @extend %flex-y;
+        height: 100%;
+    }
+}

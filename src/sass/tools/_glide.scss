@@ -1,0 +1,56 @@
+.glide {    
+    &__slides,
+    &__track {
+        height: 100%;
+    }
+
+    &__arrow {
+        @extend %abs;
+        @extend %anim;
+        top: 70px;
+        width: 39px;
+        height: 37px;
+        background-color: $c-gray-02;
+        font-size: rem(18);
+        
+        &:before {
+            @extend %anim;
+            display: inline-block;
+            margin-top: 3px;
+        }
+        
+        &--left {
+            left: -40px;
+            
+            &:before {
+                transform: scaleX(-1);
+            }
+            
+            &:hover {
+                &:before {
+                    .desktop & {
+                        transform: scaleX(-1) translateX(2px);
+                    }
+                }
+            }
+        }
+        
+        &--right {
+            right: -40px;
+            
+            &:hover {
+                &:before {
+                    .desktop & {
+                        transform: translateX(2px);
+                    }
+                }
+            }
+        }
+        
+        &:hover {
+            .desktop & {
+                background-color: var(--primary-color);
+            }
+        }
+    }
+}

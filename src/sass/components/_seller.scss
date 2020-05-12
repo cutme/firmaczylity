@@ -1,0 +1,45 @@
+.c-seller {
+
+    [class^="icon-"] {
+        margin-bottom: 10px;
+        font-size: rem(36);
+
+        &:before {
+            color: $c-green-01;
+        }
+    }
+    
+    figure {
+        
+        margin: {
+            bottom: 15px;
+            left: -15px;
+            right: -15px;
+        }
+        padding: 0 15px;
+        
+    }
+
+    figcaption {
+        @extend %lead--5;
+    }
+    
+    .o-cols {
+        @media ( max-width: $smartphone + px ) {
+            flex-wrap: wrap;
+        }
+
+        &__item {
+            &:not(:last-of-type) {
+                @media ( min-width: $smartphone + 1px ) {
+                    padding-right: 10px;
+                }
+            }
+            
+            @media ( max-width: $smartphone + px ) {
+            	width: 50%;
+            	text-align: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+.c-status {
+    
+    .o-btn {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .o-cols {
+        width: calc(100% + 20px);
+        margin: 0 -10px;
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+            display: block;
+        }
+        
+        &__item {
+            padding: 0 10px;
+            
+            @media ( max-width: $smartphone_portrait + px ) {
+                width: 100%;
+                text-align: center;
+            }
+            
+            &:first-of-type {
+                @media ( max-width: $smartphone_portrait + px ) {
+                    margin-bottom: 20px;
+                }
+            }
+            
+            p {
+                @media ( max-width: $smartphone_portrait + px ) {
+                    display: inline-block;
+                }
+            }
+        }
+        
+        .o-btn {
+            margin-top: 20px;
+            font-size: rem(16);
+            
+            @media ( max-width: $smartphone_portrait + px ) {
+                margin-top: 5px;
+            	font-size: rem(14);
+            }
+        }
+    }
+}

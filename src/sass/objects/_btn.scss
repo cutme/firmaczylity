@@ -1,0 +1,80 @@
+.o-btn {
+    @extend %anim;
+    display: inline-flex;
+    @extend %flex-xy;
+    @extend %rel;
+    white-space: nowrap;
+    padding: 0 30px;
+    text-transform: uppercase;
+    font: {
+        family: $text;
+        weight: $bold;
+    }
+    color: $c-black-01;
+    cursor: pointer;    
+
+    &--arrows {
+        &:after {
+            margin-left: 4px;
+            content: ' »';
+        }
+    }
+
+    &--primary {
+        height: 88px;
+        background-color: var(--primary-color);
+        font-size: rem(18);
+        
+        @media ( max-width: $tablet + px ) {
+            height: 68px;
+        	padding: 0 15px;
+        	font-size: rem(16);
+        }
+
+    }
+    
+    &--secondary {
+        height: 68px;
+        background-color: var(--primary-color);
+    }
+    
+    &--third {
+        height: 45px;
+        background-color: white;
+        border: 2px solid $c-gray-01;
+        font-size: rem(12);
+        
+        &:hover {
+            .desktop & {
+                background-color: var(--primary-color);
+                border-color: var(--primary-color);
+            }
+        }
+    }
+    
+    &--yellowoutline {
+        background-color: white;
+        border: 2px solid var(--primary-color);
+    }
+    
+    span {
+        width: 100%;
+	}
+	
+	&--primary,
+	&--secondary {
+    	&:hover {
+            .desktop & {
+                background-color: $c-black-01;
+                color: white;
+            }
+        }
+	}
+}
+
+a.o-btn,
+button.o-btn {
+//    .desktop & {
+
+  //  }
+}

@@ -1,0 +1,126 @@
+.c-pagination {
+    @extend %flex;
+    @extend %flex-spacebetween;
+    @extend %flex-y;
+    padding: {
+        top: 40px;
+        bottom: 40px;
+    }
+    
+    @media ( max-width: $smartphone_portrait + px ) {
+    	padding: {
+        	top: 20px;
+        	bottom: 20px;
+    	}
+    }
+    
+    &__btn {
+        @extend %anim;
+        @extend %flex-inline;
+        @extend %flex-xy;
+        @extend %rel;
+        height: 62px;
+        background-color: $c-gray-02;
+        padding: 0 30px;
+        white-space: nowrap;
+        padding: 0 35px;
+        text-transform: uppercase;
+        font: {
+            size: rem(14);
+            weight: $bold;
+        }
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+        	height: 32px;
+        	padding: 0 10px;
+        }
+        
+        &--left {
+            .icon-right-arrow {
+                margin-right: 25px;
+                transform: scaleX(-1);
+                
+                @media ( max-width: $tablet_portrait + px ) {
+                    margin-right: 0;
+                }
+            }
+            
+            &:hover {
+                .icon-right-arrow {
+                    .desktop & {
+                        transform: scaleX(-1) translateX(5px);
+                    }
+                }
+            }
+        }
+        
+        &--right {
+            flex-direction: row-reverse;
+            
+            &:hover {
+                .icon-right-arrow {
+                    .desktop & {
+                        transform: translateX(5px);
+                    }
+                }
+            }
+            
+            .icon-right-arrow {
+                margin-left: 25px;
+                
+                @media ( max-width: $tablet_portrait + px ) {
+                    margin-left: 0;
+                }
+            }
+        }
+        
+        span {
+            @media ( max-width: $tablet_portrait + px ) {
+            	display: none;
+            }
+        }
+        
+        &:hover {
+            .desktop & {
+                background-color: var(--primary-color);
+            }
+        }
+    }
+    
+    &__current {
+        padding: 0 10px;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: rem(14);
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+        	font-size: rem(12);
+        }
+        
+        a {
+            &:after {
+                content: ' ->';
+            }
+            
+            &:hover {
+                .desktop & {
+                    color: $c-black-02;
+                }
+            }
+        }
+        
+        span {
+            font-weight: $bold;
+        }
+    }
+
+    .icon-right-arrow {
+        @extend %anim;
+        margin-top: 3px;
+        font-size: rem(24);
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+            font-size: rem(18);
+        }
+    }
+}

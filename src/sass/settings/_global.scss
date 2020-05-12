@@ -1,0 +1,48 @@
+// Fonts
+
+$icomoon:           'icomoon';
+$mont:		        'Montserrat', sans-serif;
+$text:		        $mont;
+
+
+
+
+// Font weights
+
+$extralight:        200;
+$light:             300;
+$regular:           400;
+$medium:            500;
+$semibold:          600;
+$bold:              700;
+$extrabold:         800;
+
+
+$z-index: (
+    header:         30,
+	top           : 40,
+	nav           : 50,
+	logo          : 60,
+	overlay       : 60,
+);
+
+// Paths
+
+$path_img:          '../img';
+$path_fonts:        '../fonts';
+
+
+
+// Default
+
+$base-font-size:	16;
+$base:				1200;
+
+
+
+// RWD
+
+$tablet:               1024;
+$tablet_portrait:       768;
+$smartphone:			640;
+$smartphone_portrait:	500;

@@ -1,0 +1,49 @@
+.c-gallery {
+    @extend %rel;
+
+    &__big {
+        max-width: 330px;
+        margin: 0 auto;
+        padding-bottom: 30px;
+        
+        @media ( min-width: $tablet + 1px ) {
+        	padding-top: 30px;
+        }
+    }
+
+    &__thumbs {
+        
+        @media ( min-width: $tablet + 1px ) {
+        	position: absolute;
+        	left: 20px; top: 20px;
+            width: 90px;
+        }
+        
+        @media ( max-width: $tablet + px ) {
+        	display: flex;
+        	justify-content: center;
+        }
+        
+        .item {
+            @extend %anim;
+            width: 90px;
+            opacity: .5;
+            display: block;
+            border: 1px solid $c-black-01;
+            margin-bottom: 20px;
+            padding: 20px;
+            
+            @media ( max-width: $tablet + px ) {
+                margin: 0 10px;	
+            }
+            
+            @media ( max-width: $smartphone_portrait + px ) {
+            	padding: 5px;
+            }
+            
+            &.is-active {
+               opacity: 1;
+            }                
+        }
+    }
+}

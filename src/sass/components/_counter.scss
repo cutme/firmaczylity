@@ -1,0 +1,48 @@
+.c-counter {
+    @extend %rel;
+    @extend %flex;
+        
+    p {
+        @extend %rel;
+        color: $c-red-01;
+        font-size: rem(14);
+        
+        @media ( max-width: $tablet + px ) {
+            font-size: rem(12);
+        }
+        
+        &:not(:first-of-type) {
+            text-align: center;
+        }
+
+        span {
+            display: block;
+            @extend %lead--2;            
+            padding: 0 20px;
+            
+            @media ( max-width: $tablet + px ) {
+            	padding: 0 10px;
+            }
+        }
+        
+        &:first-of-type {
+            span {
+                padding-left: 0;
+            }
+        }
+        
+        &:not(:last-of-type) {
+            &:after {
+                @extend %abs-pseudo;
+                top: 1px;
+                right: -2px;
+                line-height: 1em;
+                font: {
+                    size: rem(24);
+                    weight: $bold;
+                }
+                content: ':';
+            }
+        }
+    }
+}

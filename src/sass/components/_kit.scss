@@ -1,0 +1,123 @@
+.c-kit {
+
+    .o-cols {
+        @media ( max-width: $smartphone + px ) {
+            flex-wrap: wrap;
+        }
+
+        &__item {
+            
+            &--covers {
+                @extend %flex;
+                
+                @media ( min-width: $smartphone + 1px ) {
+                    margin: 0 -10px;
+                }
+                
+                @media ( max-width: $smartphone + px ) {
+                    justify-content: center;
+                    margin-bottom: 20px;
+                }
+                
+                .item {
+                    margin: 0 10px;
+                    
+                    img {
+                        height: 100%;
+                        width: auto;
+                        max-height: 168px;
+                    }
+                }
+            }
+            
+            &--info {
+                
+                @media ( min-width: $smartphone + 1px ) {
+                	padding-left: 20px;
+                    flex: 1;
+                }
+                
+
+                table {
+                    width: 100%;
+                    
+                    th {
+                        text-align: left;
+                        padding-right: 10px;
+                    }
+                    
+                    th, td {
+                        line-height: 1.2em;
+                    }
+                    
+                    th, td {
+                        padding-bottom: 10px;
+                    }
+                    
+                    td {
+                        white-space: nowrap;
+                        padding-bottom: 20px;
+                        font-weight: $bold;
+                    }
+
+                    .num {
+                        color: $c-black-01;
+                    }
+                }
+                
+                .item {
+                    text-transform: uppercase;
+                    color: $c-green-01;
+                }
+            }   
+            
+            @media ( max-width: $smartphone + px ) {
+            	width: 100%;
+            }         
+        }
+        
+        &--summary {
+            @extend %flex-y;
+            border-top: 1px solid rgba($c-black-01, .2);
+            padding-top: 15px;
+            
+            @media ( max-width: $tablet + px ) {
+            	flex-wrap: wrap;
+            }
+            
+            .o-btn {
+                @media ( max-width: $tablet + px ) {
+                    width: 100%;
+                    margin-top: 10px;
+                }
+            }
+            
+            .o-cols__item {
+                
+                @media ( max-width: $tablet + px ) {
+                    width: 100%;
+                }
+
+                del {
+                    @media ( min-width: $tablet + 1px ) and ( max-width: 1200px ) {
+                        display: block;
+                    }
+                }
+                
+                p {
+                    &:first-of-type {
+                        margin-bottom: 4px;
+                    }
+                }
+                
+                del, span {
+                    white-space: nowrap;
+                }
+                
+                &:last-of-type {
+                    margin: 0 0 0 auto;
+                }
+            }
+        }
+    }
+}

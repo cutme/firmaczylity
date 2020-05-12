@@ -1,0 +1,56 @@
+.c-delivery {
+    table {
+        width: 100%;
+        margin-bottom: 20px;
+        
+        th {
+            text-align: left;
+        }
+        
+        thead {
+            th {
+                padding-bottom: 10px;
+                white-space: nowrap;
+                font-size: rem(14);
+            }
+        }
+        
+        tbody {
+            border-top: 1px solid $c-gray-03;
+
+            tr {
+                td {
+                    @extend %lead--4;
+                    padding: 10px 20px;
+                    border-bottom: 1px solid $c-gray-03;
+                    border-left: 1px solid $c-gray-03;
+                    border-right: 1px solid $c-gray-03;
+                    font-weight: $bold;
+                    
+                    &:first-of-type {
+                        color: $c-green-01;
+                    }
+                    
+                    &:last-of-type {
+                        white-space: nowrap;
+                        
+                        @media ( max-width: $smartphone_portrait + px ) {
+                    	    text-align: right;
+                        }
+                    }
+                    
+                    @media ( max-width: $smartphone_portrait + px ) {
+                        padding: 10px;
+                    	font-size: rem(16);
+                    }
+                }
+            }
+        }
+    }
+    
+    .o-article {
+        p {
+            font-size: rem(14);
+        }
+    }
+}

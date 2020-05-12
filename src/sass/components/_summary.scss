@@ -1,0 +1,87 @@
+.c-summary {
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(black, .15);    
+    
+    &__button {
+        margin-bottom: 20px;
+
+        .o-btn {
+            width: 100%;
+        }
+    }
+    
+    &__details {
+        
+        p {
+            @extend %flex;
+            margin-bottom: 10px;
+            font-size: rem(14);
+            
+            [class^="icon-"] {
+                display: inline-block;
+                width: 25px;
+                color: $c-gray-05;
+            }
+        }
+    }
+    
+    &__price {
+        @extend %flex;
+        @extend %flex-y;     
+        margin-bottom: 5px;
+        
+        del {
+            display: block;
+            line-height: 1.2em;
+            text-align: right;
+            font-size: rem(18);
+            
+            & + span {
+                color: $c-red-01;
+            }
+        }
+        
+        .price {
+            margin: 0 0 0 auto;
+            
+            span {
+                line-height: 1.2em;
+                font: {
+                    size: rem(30);
+                    weight: $bold;
+                }
+            }
+        }
+    }
+    
+    &__promo {
+        .o-lead--5 {
+            margin-bottom: 5px;
+        }
+    }
+    
+    &__quantity {
+        margin-bottom: 20px;
+    }
+    
+    &__timer {
+        p {
+            @media ( max-width: $tablet + px ) {
+            	font-size: rem(14);
+            }
+        }
+    }
+    
+    .o-lead {
+        &--4,
+        &--5 {
+            font-weight: $light;
+        }
+    }
+
+    .timer {
+        white-space: nowrap;
+        padding: 2px 8px;
+        border: 2px solid $c-gray-04;
+    }
+}

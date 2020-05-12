@@ -1,0 +1,68 @@
+.o-bag {
+    @extend %flex;
+    @extend %flex-inline;
+    @extend %flex-y;
+    height: 100%;
+    background-color: white;
+    margin: 0 0 0 auto;
+    padding: 0 35px;
+    
+    @media ( max-width: $smartphone_portrait + px ) {
+    	padding: 0 15px 0 10px;
+    }
+    
+    [class^="icon-"] {
+        @extend %rel;
+        font-size: rem(34);
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+            font-size: rem(28);
+        }
+        
+        &:after {
+            @extend %anim;
+            @extend %abs-pseudo;
+            right: 0; top: 10px;
+            width: 30px; height: 30px;
+            transform: translate3d(50%, 50%, 0);
+            background-color: $c-black-01;
+            border-radius: 50%;
+            border: 2px solid white;
+            text-align: center;
+            line-height: 24px;
+            font-size: rem(14);
+            color: white;
+            content: attr(data-num);
+            
+            @media ( max-width: $smartphone_portrait + px ) {
+                top: 5px;
+                width: 26px; height: 26px;
+                line-height: 20px;
+            }
+        }
+    }
+    
+    span {
+        padding-left: 15px;
+        text-transform: uppercase;
+        font-weight: $bold;
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+            display: none;
+        }
+    }
+    
+    &:hover {
+        .desktop & {
+            background-color: $c-black-01;
+            color: white;
+            
+            [class^="icon-"] {
+                &:after {
+                    background-color: var(--primary-color);
+                    color: $c-black-01;
+                }
+            }
+        }
+    }
+}

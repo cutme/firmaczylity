@@ -1,0 +1,25 @@
+.c-warranty {
+    
+    .o-cols {
+        
+        img {
+            @media ( max-width: $smartphone_portrait + px ) {
+                margin: 0 auto 20px auto;
+            }
+        }
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+        	display: block;
+        }
+        
+        &__item {
+            &:first-of-type {
+                
+                @media ( min-width: $smartphone_portrait + 1px ) {
+                    flex-shrink: 0;
+                    width: 140px;
+                }
+            }
+        }
+    }
+}

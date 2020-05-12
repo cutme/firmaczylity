@@ -1,0 +1,45 @@
+.c-popup {
+    max-width: 600px;
+    margin: 30px auto;
+    display: none;
+  
+    &__inside {
+        @extend %anim;
+        background-color: white;
+        padding: 40px;
+        transform: translate3d(0, 50px, 0);
+        opacity: 0;
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+        	padding: 20px;
+        }
+    }
+    
+    &.is-active {
+        display: block;
+    }
+    
+    &.is-visible {
+        .c-popup__inside {
+            opacity: 1;
+            transform: translate3d(0,0,0);
+        }
+    }
+    
+    .o-btn {
+        width: 100%;
+        min-width: 0;
+    }
+        
+    .o-lead {
+        &--4 {
+            margin-bottom: 5px;
+            font-weight: $regular;
+        }
+        
+        .num,
+        .price {
+            font-size: rem(30);
+        }
+    }
+}

@@ -1,0 +1,43 @@
+.o-box {
+    @extend %rel;
+    background-color: white;
+    margin-bottom: 20px;  
+    
+    &__inside {
+        @extend %rel;
+        padding: 20px;
+    }
+    
+    &--corners {
+        &:before, &:after {
+            @extend %abs-pseudo;
+            left: 0; top: 0;
+            background-color: var(--primary-color);
+        }
+        
+        &:before {
+            width: 2px; height: 80px;
+        }
+        
+        &:after {
+            width: 80px; height: 2px;
+        }
+        
+        .o-box__inside {
+            &:before, &:after {
+                @extend %abs-pseudo;
+                right: 0; top: 100%;
+                background-color: var(--primary-color);
+            }
+            
+            &:before {
+                width: 2px; height: 80px;
+                transform: translateY(-80px);
+            }
+            
+            &:after {
+                width: 80px; height: 2px;
+            }
+        }
+    }
+}
