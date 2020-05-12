@@ -33,6 +33,10 @@
             margin-bottom: 20px;
             padding: 20px;
             
+            img {
+                margin: 0 auto;
+            }
+            
             @media ( max-width: $tablet + px ) {
                 margin: 0 10px;	
             }
