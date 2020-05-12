@@ -1,6 +1,6 @@
 .o-box {
     @extend %rel;
-    background-color: white;
+    background-color: var(--primary-box);
     margin-bottom: 20px;  
     
     &__inside {
