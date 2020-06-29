@@ -1,0 +1,49 @@
+<% include ./src/includes/head %>
+<body>
+
+    <% include ./src/includes/cover %>
+    <% include ./src/includes/top %>
+
+    <div class="o-wrap">
+    
+        <% include ./src/includes/pagination-current %>
+        
+        <header class="o-header">
+            <h1 class="o-lead--1">Firma, czyli Ty [książka]</h1>
+        </header>
+        
+        <main class="o-cols o-cols--sidebar">
+            <div class="o-cols__item">
+
+                <% include ./src/includes/gallery %>
+                <% include ./src/includes/kit %>
+                <% include ./src/includes/params %>
+                <% include ./src/includes/description %>
+                <% include ./src/includes/reviews %>
+                <% include ./src/includes/delivery %>
+                <% include ./src/includes/accordion %>
+                <% include ./src/includes/seller %>
+                <% include ./src/includes/other %>
+                
+            </div>
+            
+            <div class="o-cols__item">
+                
+                <% include ./src/includes/summary %>
+                
+            </div>
+        </main>
+        
+        <% include ./src/includes/pagination %>
+    </div>
+    
+    <% include ./src/includes/social %>
+    <% include ./src/includes/footer %> 
+    
+    <% include ./src/includes/popup %> 
+       
+    
+</body>
+</html>
+
+

@@ -11,6 +11,8 @@ require('./js/gallery.js');
 require('./js/helpers.js');
 require('./js/ismobile.js');
 require('./js/inview.js');
+require('./js/nav.js');
 require('./js/popup.js');
 require('./js/quantity.js');
 require('./js/countdown.js');
+require('./js/scrollpos.js');

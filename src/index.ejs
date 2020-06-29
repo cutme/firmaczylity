@@ -2,39 +2,146 @@
 <body>
 
     <% include ./src/includes/cover %>
+    <% include ./src/includes/topbar %>
     <% include ./src/includes/top %>
+    <% include ./src/includes/nav %>
 
     <div class="o-wrap">
-    
-        <% include ./src/includes/pagination-current %>
-        
-        <header class="o-header">
-            <h1 class="o-lead--1">Firma, czyli Ty [książka]</h1>
-        </header>
-        
-        <main class="o-cols o-cols--sidebar">
-            <div class="o-cols__item">
 
-                <% include ./src/includes/gallery %>
-                <% include ./src/includes/kit %>
-                <% include ./src/includes/params %>
-                <% include ./src/includes/description %>
-                <% include ./src/includes/reviews %>
-                <% include ./src/includes/delivery %>
-                <% include ./src/includes/accordion %>
-                <% include ./src/includes/seller %>
-                <% include ./src/includes/other %>
+        <div class="c-biglead">
+            <header class="o-header">
+                <h1 class="o-lead--1">Lorem ipsum dolor sit amet,
+consectetur adipiscing elit.</h1>
+            </header>
+        </div>
+        
+        <% include ./src/includes/homeslider %>
+        
+        <div class="c-banners">
+                        
+            <div class="o-cols o-cols--2">
+                <div class="o-cols__item">
+                    <img src=<%= require("./img/placeholders/590x400.png") %> alt="" width="590" height="400">
+                </div>
                 
+                <div class="o-cols__item">
+                    <img src=<%= require("./img/placeholders/590x400.png") %> alt="" width="590" height="400">
+                </div>
             </div>
             
-            <div class="o-cols__item">
+            <div class="o-cols o-cols--3">
+                <div class="o-cols__item">
+                    <img src=<%= require('./img/placeholders/390x300.png') %> alt="" width="390" height="300" />
+                </div>
                 
-                <% include ./src/includes/summary %>
+                <div class="o-cols__item">
+                    <img src=<%= require('./img/placeholders/390x300.png') %> alt="" width="390" height="300" />
+                </div>
                 
+                <div class="o-cols__item">
+                    <img src=<%= require('./img/placeholders/390x300.png') %> alt="" width="390" height="300" />
+                </div>
             </div>
-        </main>
+
+        </div>
         
-        <% include ./src/includes/pagination %>
+        <header class="o-header o-header--line">
+            <h2 class="o-lead--1h">
+                <span>Najnowsze produkty</span>
+            </h2>
+        </header>
+        
+        <div class="c-products">
+            <div class="o-cols o-cols--3 anim anim--up">
+                <div class="o-cols__item">
+                    <% include ./src/includes/item-medium %>         
+                </div>
+                
+                <div class="o-cols__item">
+                    <% include ./src/includes/item-medium %>                    
+                </div>
+                
+                <div class="o-cols__item">
+                    <% include ./src/includes/item-medium %>                    
+                </div>
+            </div>
+            
+            <div class="o-cols o-cols--5 anim anim--up">                
+                <div class="o-cols__item">
+                    <% include ./src/includes/item-small %>
+                </div>
+                
+                <div class="o-cols__item">
+                    <% include ./src/includes/item-small %>                   
+                </div>
+                
+                <div class="o-cols__item">
+                    <% include ./src/includes/item-small %>                   
+                </div>
+                
+                <div class="o-cols__item">
+                    <% include ./src/includes/item-small %>                   
+                </div>
+                
+                <div class="o-cols__item">
+                    <% include ./src/includes/item-small %>                 
+                </div>
+            </div>
+        </div>
+        
+        <% include ./src/includes/benefits %>
+        
+        <header class="o-header o-header--line">
+            <h2 class="o-lead--1h">
+                <span>Najlepsze promocje</span>
+            </h2>
+        </header>
+     
+        <div class="c-products">
+            <div class="o-cols o-cols--3 anim anim--up">
+                <div class="o-cols__item">
+                    <% include ./src/includes/item-medium %>         
+                </div>
+                
+                <div class="o-cols__item">
+                    <% include ./src/includes/item-medium %>                    
+                </div>
+                
+                <div class="o-cols__item">
+                    <% include ./src/includes/item-medium %>                    
+                </div>
+            </div>
+            
+            <div class="o-cols o-cols--5 anim anim--up">                
+                <div class="o-cols__item">
+                    <% include ./src/includes/item-small %>
+                </div>
+                
+                <div class="o-cols__item">
+                    <% include ./src/includes/item-small %>                   
+                </div>
+                
+                <div class="o-cols__item">
+                    <% include ./src/includes/item-small %>                   
+                </div>
+                
+                <div class="o-cols__item">
+                    <% include ./src/includes/item-small %>                   
+                </div>
+                
+                <div class="o-cols__item">
+                    <% include ./src/includes/item-small %>                 
+                </div>
+            </div>
+        </div>
+        
+        <header class="o-header o-header--halfmargin">
+            <h2 class="o-lead--1h">Lorem ipsum</h2>
+        </header>
+        
+        <article class="o-article o-article--big">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum maiores aperiam quisquam animi quam ullam dolorem at rerum ipsa sunt nemo, magnam, id fuga natus repudiandae non molestias ad alias! Et numquam nostrum, sunt officia voluptates iusto delectus ullam sapiente.</p>
+        </article>
     </div>
     
     <% include ./src/includes/social %>

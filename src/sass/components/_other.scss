@@ -32,4 +32,23 @@
     @media ( max-width: $smartphone_portrait + px ) {
     	margin-bottom: -20px;
     }
+
+    .glide {        
+        &__arrow {
+            @extend %abs;
+            @extend %anim;
+            top: 70px;
+            width: 39px;
+            height: 37px;
+            font-size: rem(18);
+            
+            &--left {
+                left: -40px;
+            }
+            
+            &--right {
+                right: -40px;
+            }
+        }
+    }
 }

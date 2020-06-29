@@ -9,11 +9,21 @@
     
     .o-logo {
         margin-right: 20px;
+        
+        .mobile-menu & {
+            display: none;
+        }
     }
     
     .o-wrap {
         @extend %flex;
         @extend %flex-y;
         height: 100%;
+    }
+    
+    &.is-sticked {
+        position: fixed;
+        top: 0;
+        width: 100%;
     }
 }

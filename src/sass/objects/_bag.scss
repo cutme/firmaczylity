@@ -52,6 +52,10 @@
         }
     }
     
+    .mobile-menu & {
+        display: none;
+    }
+    
     &:hover {
         .desktop & {
             background-color: $c-black-01;

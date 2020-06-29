@@ -112,6 +112,7 @@
 %lead {
     
     &--1,
+    &--1h,
     &--2,
     &--3,
     &--4,
@@ -121,7 +122,6 @@
     }
     
     &--1 {
-        text-transform: uppercase;
         font-size: rem(36);
         
         @media ( max-width: $tablet_portrait + px ) {
@@ -130,6 +130,18 @@
         
         @media ( max-width: $smartphone_portrait + px ) {
             font-size: rem(28);
+        }
+    }
+    
+    &--1h {
+        font-size: rem(30);
+        
+        @media ( max-width: $tablet_portrait + px ) {
+        	font-size: rem(26);
+        }
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+            font-size: rem(24);
         }
     }
     

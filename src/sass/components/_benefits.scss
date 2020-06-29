@@ -1,0 +1,64 @@
+.c-benefits {
+    background-color: $c-gray-02;
+    margin-bottom: 30px;
+    padding: 40px 40px 20px 40px;
+    
+    @media ( max-width: $tablet + px ) {
+    	padding: 40px 20px;
+    }
+    
+    @media ( max-width: $smartphone_portrait + px ) {
+        text-align: center;
+    }
+    
+    [class^="icon-"] {
+        display: block;
+        margin: 5px 0 15px 0;
+        font-size: rem(36);
+        color: $c-green-01
+    }
+    
+    p {
+        flex: 1;
+        font-size: rem(14);
+    }
+    
+    &__header {
+        flex: 1;
+    }
+
+    .o-cols {
+        @media ( max-width: $tablet_portrait + px ) {
+            flex-wrap: wrap;
+        }
+        
+        
+
+        &__item {
+            @extend %flex;
+            @extend %flex-column;
+            margin-bottom: 20px;
+
+            &:not(:last-of-type) {
+                @media ( min-width: $smartphone_portrait + 1px ) {
+                    padding-right: 40px;
+                }
+            }
+            
+            @media ( max-width: $tablet_portrait + px ) {
+            	width: 50%;
+            }
+            
+            @media ( max-width: $smartphone_portrait + px ) {
+                width: 100%;
+            }
+        }
+    }
+    
+    .o-lead {
+        &--4 {
+           margin-bottom: .5em; 
+           text-transform: uppercase;
+        }
+    }
+}

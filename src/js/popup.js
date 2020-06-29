@@ -4,14 +4,14 @@ const enableBodyScroll = bodyScrollLock.enableBodyScroll;
 
 document.addEventListener('DOMContentLoaded', function() {
     
-    const el = document.getElementsByClassName('js-popup');
+    const el = document.getElementsByClassName('js-popup'),
+          trigger = document.getElementsByClassName('js-showPopup')[0];
     
     const init = function() {
 
         const overlay = document.getElementById('overlay'),
               inside = overlay.getElementsByClassName('js-inside')[0],
-              popup = document.getElementsByClassName('js-popup')[0],
-              trigger = document.getElementsByClassName('js-showPopup')[0];
+              popup = document.getElementsByClassName('js-popup')[0];
               
         let target;
               
@@ -109,8 +109,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });       
     }
     
-    el.length > 0 ? init() : false;
-    
-    
+    trigger ? init() : false;
     
 }, false);

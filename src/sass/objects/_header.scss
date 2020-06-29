@@ -1,12 +1,44 @@
 .o-header {
     .o-lead {
-        &--1 {
-            margin-bottom: 1em;
-        }
-        
+        &--1,
+        &--1h,
         &--2, 
         &--3 {
             margin-bottom: 1em;
+        }
+    }
+    
+    &--halfmargin {
+        .o-lead {
+            &--1,
+            &--1h {
+                margin-bottom: .4em;
+            }
+        }
+    }
+    
+    &--line {
+        @extend %rel;
+        text-align: center;
+        
+        &:before {
+            @extend %abs;
+            @extend %abs-pseudo;
+            @extend %abs-y;
+            z-index: -1;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+        
+        span {
+            background-color: $c-gray-01;
+            padding: 0 40px;
+            
+            @media ( max-width: $smartphone_portrait + px ) {
+            	padding: 0 20px;
+            }
         }
     }
 }

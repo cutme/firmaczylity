@@ -1,0 +1,27 @@
+.c-banners {
+    margin-bottom: 60px;
+    
+    @media ( max-width: $tablet_portrait + px ) {
+    	margin-bottom: 30px;
+    }
+
+    .o-cols {
+        &--2 {
+            width: calc(100% + 20px);
+            margin: 0 -10px;
+            
+            .o-cols__item {
+                margin: 0 10px 20px 10px;
+            }
+        }
+
+        &--3 {
+            width: calc(100% + 15px);
+            margin: 0 -7.5px;
+
+            .o-cols__item {
+                margin: 0 7.5px 20px 7.5px;                
+            }           
+        }
+    }
+}

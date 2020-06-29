@@ -1,0 +1,28 @@
+.c-topbar {
+	@include z-index(topbar);
+    background-color: $c-pink-01;
+    color: white;
+    
+    p {
+        line-height: 1.2em;
+        margin-right: 10px;
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+        	font-size: rem(12);
+        }
+    }
+    
+    .o-btn {
+        white-space: nowrap;
+    }
+    
+    .o-wrap {
+        @extend %flex;
+        @extend %flex-y;
+        @extend %flex-spacebetween;
+        padding: {
+            top: 10px;
+            bottom: 10px;
+        }
+    }
+}

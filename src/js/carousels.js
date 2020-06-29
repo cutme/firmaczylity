@@ -3,8 +3,26 @@ import css from '../../node_modules/@glidejs/glide/src/assets/sass/glide.core.sc
 
 document.addEventListener('DOMContentLoaded',function() {
 
-    const other = document.getElementById('otherCarousel');
+    const home = document.getElementById('homeCarousel'),
+          other = document.getElementById('otherCarousel');
     
+    
+    const homeCarousel = function() {
+    
+        const glide = new Glide(home, {
+            animationDuration: 600,
+            autoplay: false,
+            hoverpause: true,
+            gap: 0,
+            perView: 1,
+            type: 'carousel'
+        })
+
+        setTimeout(function() {
+            glide.mount();
+        }, 100)
+    };
+
     const otherCarousel = function() {
     
         const glide = new Glide(other, {
@@ -31,6 +49,7 @@ document.addEventListener('DOMContentLoaded',function() {
         }, 100)
     };
 
+    home ? homeCarousel() : false;
     other ? otherCarousel() : false;
 
 }, false)

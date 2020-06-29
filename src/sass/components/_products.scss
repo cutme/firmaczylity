@@ -1,0 +1,47 @@
+.c-products {
+    .o-cols {
+        &--3 {
+            width: calc(100% + 30px);
+            margin: 0 -15px;
+            
+            .o-cols__item {
+                width: calc(100% / 3);
+                padding: 0 15px;
+                
+                @media ( max-width: $tablet_portrait + px ) {
+                    padding: 0 7px;
+                }
+            }
+        }
+        
+        &--5 {
+            @extend %flex-wrap;
+            width: calc(100% + 14px);
+            margin: 0 -7px;
+            
+            .o-cols {
+                &__item {
+                    padding: 0 7px;
+                    
+                    @media ( max-width: $tablet + px ) {
+                        width: calc(100% / 4);
+                    }
+                    
+                    @media ( max-width: $tablet_portrait + px ) {
+                        width: calc(100% / 3);
+                    }
+                }
+            }
+        }
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+            flex-wrap: wrap;
+        }
+        
+        .o-cols__item {
+            @media ( max-width: $smartphone_portrait + px ) {
+                width: 50%;
+            }
+        }
+    }
+}

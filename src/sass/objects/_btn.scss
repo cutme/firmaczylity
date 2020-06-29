@@ -3,9 +3,13 @@
     display: inline-flex;
     @extend %flex-xy;
     @extend %rel;
-    white-space: nowrap;
+    //white-space: nowrap;
     padding: 0 30px;
-    text-transform: uppercase;
+    line-height: 1.2em;
+    text: {
+        align: center;
+        transform: uppercase;
+    }
     font: {
         family: $text;
         weight: $bold;
@@ -30,14 +34,13 @@
         	padding: 0 15px;
         	font-size: rem(16);
         }
-
     }
     
     &--secondary {
         height: 68px;
         background-color: var(--primary-color);
     }
-    
+
     &--third {
         height: 45px;
         background-color: white;
@@ -52,6 +55,31 @@
         }
     }
     
+    &--fourth {
+        padding: 0 15px;
+        height: 40px;
+        font-weight: $bold;
+        
+        &:hover {
+            .desktop & {
+                background-color: var(--primary-color);
+                color: $c-black-01;
+            }
+        }
+    }
+
+    // Colors
+    
+    &--black {
+        background-color: $c-black-01;
+        color: white;
+    }
+    
+    &--blackoutline {
+        background-color: $c-gray-01;
+        border: 2px solid $c-black-01;
+    }
+
     &--yellowoutline {
         background-color: white;
         border: 2px solid var(--primary-color);

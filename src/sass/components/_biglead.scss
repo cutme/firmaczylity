@@ -1,0 +1,20 @@
+.c-biglead {
+    max-width: $tablet_portrait + px;
+    margin: 0 auto;
+    padding: 40px 0 0 0;
+
+    .o-lead {
+        &--1 {
+            text-align: center;
+            font-size: rem(48);
+            
+            @media ( max-width: $tablet_portrait + px ) {
+            	font-size: rem(32);
+            }
+            
+            @media ( max-width: $smartphone_portrait + px ) {
+                font-size: rem(28);
+            }
+        }
+    }
+}

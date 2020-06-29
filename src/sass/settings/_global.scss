@@ -19,10 +19,11 @@ $extrabold:         800;
 
 
 $z-index: (
+    hamburger:      65,
+    top:            65,
     header:         30,
-	top           : 40,
 	nav           : 50,
-	logo          : 60,
+	logo          : 10,
 	overlay       : 60,
 );
 

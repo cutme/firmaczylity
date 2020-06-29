@@ -1,13 +1,12 @@
 .o-cols {
-    display: flex;
+    @extend %flex;
 	width: 100%;
-    
-    @media ( min-width: $tablet + 1px ) {
-    	//display: flex;
-    }
 
     &__item {
         @extend %rel;
+        &:hover {
+            z-index: 10;
+        }
     }
     
     &--2 {
@@ -18,10 +17,28 @@
         }
     }
     
+    &--3 {   
+        .o-cols {
+            &__item {
+                width: calc(100% / 3);
+            }           
+        }
+    }
+    
     &--4 {
         .o-cols {
             &__item {
                 width: calc(100% / 4);
+            }
+        }
+    }
+    
+    &--5 {
+        
+        .o-cols {
+            &__item {
+                width: calc(100% / 5);
+               
             }
         }
     }

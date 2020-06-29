@@ -1,0 +1,27 @@
+.o-sticker {
+    @extend %lead--6;
+    padding: 5px;
+    min-width: 60px;
+    text: {
+        align: center;
+        transform: uppercase;
+    }
+    font-weight: $bold;
+    color: white;
+    
+    @media ( max-width: $smartphone_portrait + px ) {
+        padding: 2px;
+    }
+
+    &--green {
+        background-color: $c-green-02;
+    }
+
+    &--red {
+        background-color: $c-red-01;
+    }
+    
+    &:first-of-type {
+        border-radius: 4px 0 0 0;
+    }
+}

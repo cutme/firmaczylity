@@ -1,0 +1,31 @@
+.c-homeslider {
+    margin-bottom: 20px;
+    
+    .glide {        
+        &__arrow {
+            @extend %abs-y;
+            width: 59px; height: 57px;
+            background-color: $c-gray-02;
+            font-size: rem(26);
+            
+            @media ( max-width: $tablet_portrait + px ) {
+            	width: 39px;
+                height: 37px;
+                font-size: rem(18);
+            }
+            
+            &:before {
+                @extend %anim;
+                //display: inline-block;
+            }
+            
+            &--left {            
+                left: 0;
+            }
+            
+            &--right {            
+                right: 0;
+            }
+        }
+    }
+}

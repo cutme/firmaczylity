@@ -1,6 +1,10 @@
 .o-lead {
     &--1 {
-        @extend %lead--1;   // 38
+        @extend %lead--1;   // 36
+    }
+    
+    &--1h {
+        @extend %lead--1h;   // 30
     }
     
     &--2 {

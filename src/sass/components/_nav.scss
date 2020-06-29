@@ -1,3 +1,159 @@
 .c-nav {
+    @extend %rel;
+    @include z-index(nav);
+    background-color: white;
+    //height: 70px;
+
+    @media ( max-width: $tablet_portrait + px ) {
+        display: flex;
+    }
     
+    &__menu {
+        
+        @media ( min-width: $tablet + 1px ) {
+        	display: flex;
+        	height: 100%;
+            margin: {
+                left: -30px;
+                right: -30px;
+            }
+        }
+
+        a {
+            @extend %flex;
+            @extend %flex-y;
+            height: 100%;
+            padding: 0 30px;
+            white-space: nowrap;
+            text-transform: uppercase;
+            font: {
+                size: rem(14);
+                weight: $bold;
+            } 
+            
+            @media ( min-width: $tablet + 1px ) {
+            	padding: 22px 30px;
+            }
+            
+            @media ( min-width: $tablet + 1px ) and ( max-width: $base + 80px ) {
+            	padding: 22px 15px;
+            }
+            
+            @media ( max-width: $tablet + px ) {
+            	padding: 5px 15px;
+            }
+            
+            &:hover {
+                .desktop & {
+                    @media ( min-width: $tablet + 1px ) {
+                    	background-color: $c-black-01;
+                        color: white;
+                    }
+                    
+                    @media ( max-width: $tablet + px ) {
+                        opacity: .6;
+                    }
+                    
+                }
+            }
+        }
+    }
+    
+    .o-wrap {
+        height: 100%;
+    }
+    
+    @media ( max-width: $tablet + px ) {
+        position: fixed;
+        left: 0; top: 0;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%; height: 100vh;
+        background-color: $c-primary;
+        text-align: center;
+        transform: translate3d(100%, 0, 0);
+
+        .c-nav__menu {
+            & > li {  
+                opacity: 0;
+                transform: translate3d(0, 10px, 0);
+                transition: all 300ms ease;
+                
+                &:nth-child(1) {
+                    transition-delay: 300ms;
+                }
+                                                      
+                &:nth-child(2) {
+                    transition-delay: 350ms;
+                }
+                               
+                &:nth-child(3) {
+                    transition-delay: 400ms;
+                }
+                
+                &:nth-child(4) {
+                    transition-delay: 450ms;
+                }
+                
+                &:nth-child(5) {
+                    transition-delay: 500ms;
+                }
+                
+                &:nth-child(6) {
+                    transition-delay: 550ms;
+                }
+                
+                &:nth-child(7) {
+                    transition-delay: 600ms;
+                }
+                
+                &:nth-child(8) {
+                    transition-delay: 650ms;
+                }
+                
+                &:nth-child(9) {
+                    transition-delay: 700ms;
+                }
+                
+                &:nth-child(10) {
+                    transition-delay: 750ms;
+                }               
+            }
+        }
+        
+        &.is-visible {
+            transition: all 300ms ease;
+            transform: translate3d(0,0,0);
+
+            li {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
+            
+            .c-top {
+                &__language,
+                &__currency,
+                &__signinup  {
+                    opacity: 1;
+                    transform: translate3d(0, 0, 0);
+                }
+            }
+        }
+        
+        .o-wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: auto;
+        	-webkit-overflow-scrolling: touch;
+        	
+        	
+        }
+    } 
+    
+    &.is-block {
+        .o-wrap {
+            display: block;
+        }
+    }
 }

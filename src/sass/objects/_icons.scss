@@ -13,6 +13,27 @@
   -moz-osx-font-smoothing: grayscale;
   }
 }
+.icon-star-o:before {
+  content: "\e912";
+}
+.icon-gift:before {
+  content: "\e913";
+}
+.icon-lifebuoy:before {
+  content: "\e914";
+}
+.icon-heart:before {
+  content: "\e915";
+}
+.icon-instagram:before {
+  content: "\e902";
+}
+.icon-youtube:before {
+  content: "\e903";
+}
+.icon-truck:before {
+  content: "\e904";
+}
 .icon-badge:before {
   content: "\e905";
   color: #626262;
@@ -76,13 +97,4 @@
 }
 .icon-bubble:before {
   content: "\e901";
-}
-.icon-instagram:before {
-  content: "\e902";
-}
-.icon-youtube:before {
-  content: "\e903";
-}
-.icon-truck:before {
-  content: "\e904";
 }

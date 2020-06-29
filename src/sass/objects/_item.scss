@@ -1,0 +1,153 @@
+.o-item {
+    @extend %anim;
+    @extend %rel;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    
+    @media ( min-width: $tablet_portrait + 1px ) {
+        margin-bottom: 50px;
+    }
+
+    &:hover {
+        .desktop & {
+            background-color: white;
+            box-shadow: 0 0 20px rgba(black, .2);
+            
+            .o-item__buttons {
+                opacity: 1;
+                pointer-events: auto;
+                transform: scale(1) translateY(0);
+            }
+        }
+    }
+
+    del {
+        font-weight: $light;
+    }
+    
+    &__buttons {
+        padding: 10px 10px;
+        
+        .o-cols--3 & {
+            
+            @media ( min-width: $tablet_portrait + 1px ) {
+            	display: flex;
+            }
+        }
+    }
+    
+    &__description {
+        padding: 0 10px;        
+    }
+
+    &__photo {
+        @extend %flex;
+        @extend %flex-xy;
+        background-color: white;
+        border-radius: 4px;
+        margin-bottom: 15px;
+        padding: 40px 30px;
+        
+        @media ( max-width: $tablet + px ) {
+        	padding: 40px 15px;
+        }
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+            margin-bottom: 5px;
+        	padding: 30px 5px 10px 5px;
+        }
+    }
+    
+    &__stickers {
+        @extend %abs;
+        @extend %flex;
+        left: 0; top: 0;
+    }
+    
+    .o-btn {
+        width: 100%;
+        margin-bottom: 5px;
+        padding: 0 5px;
+        font-size: rem(14);
+        
+        @media ( max-width: $tablet_portrait + px ) {
+        	font-size: rem(12);
+        }
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+            height: 38px;
+            font-size: rem(10);
+        }
+        
+        .o-cols--3 & {
+            
+            @media ( min-width: $tablet_portrait + 1px ) {
+                width: 50%;
+            }
+            
+            @media ( min-width: $smartphone_portrait + 1px ) and ( max-width: $tablet_portrait + px ) {
+                height: 58px;
+            }            
+        }
+        
+        .o-cols--5 & {
+            
+            @media ( min-width: $smartphone_portrait + 1px ) {
+                height: 58px;
+            }
+        }
+        
+        &:first-of-type {
+            .o-cols--3 & {
+                
+                @media ( min-width: $tablet_portrait + 1px ) {
+	                margin-right: 5px;
+                }
+            }
+        }
+        
+        &:last-of-type {
+            .o-cols--3 & {
+                
+                @media ( min-width: $tablet_portrait + 1px ) {
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+
+    .o-lead {
+        padding: 5px 0;
+        
+        &--4 {
+            @media ( max-width: $smartphone_portrait + px ) {
+                font-size: rem(14);
+            }
+        }
+        
+        .o-cols--5 & {
+            font-size: rem(16);
+            
+            @media ( max-width: $tablet_portrait + px ) {
+                //font-size: remm(1);
+            }
+        }
+    }
+
+    .o-cols--5 & {
+        .o-item__buttons {
+            
+            @media ( min-width: $tablet_portrait + 1px ) {
+                position: absolute;
+            	background-color: white;
+                box-shadow: 0 10px 20px 0px rgba(0,0,0,.2);
+                overflow: hidden;
+                opacity: 0;
+                pointer-events: none;
+                transform-origin: 50% 0;
+                transform: scale(0.75) translateY(-21px);
+                transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+            }
+        }
+    }
+}
